@@ -1,0 +1,41 @@
+#Vulnerabilities:
+#_________________
+
+#Generally speaking vulnerabilities are flaws in a program that are related to some sort of a situation the developer didn't consider.
+
+#ocassionally we have protocols that actually are flawed by them selves (we might uncover some sort of a flaw in the underlying protocol )
+
+#the vast majority of vulnerabilities that we are going to see are made by average programmers.
+
+#THE MOST COMMON VULERNABILITY IS GOING TO BE :
+
+#A STACK BUFFER OVERFLOW.
+#so ... what is a stack bufferoverflow?
+
+void functionFunction(char *param, int p2, float p3)
+{
+	char[local 1024];
+	strcpy(local, param);
+
+}
+
+int main(int argc, char** argv):
+{
+	functionFunction(argv[1], 42, 3.14);
+}
+
+# in the previous program we define some sort of a buffer, so we have a buffer that we have defined, perhabs that buffer is not large enough for all possible inputs.
+
+# This can cause bugs in the program, but when things get really bad is when a user has control over this input.
+
+#so whenever we allow a user control over these inputs its going to be very bad in this program that was written in C:
+
+# C is used to write nearly every OS on the planet.
+
+# because of that we will find a lot of things such as : Stack buffer overflows and other things that can trace themselves back to the C programming language.
+
+# The previous C program has one function which is called functionFunction and a main function , in c or C++ programms the standard main function that gets called takes two parameters, the first parameter is the number of args ( arguments ) that were passed, Traditionally we call that argc ( arg C ), you can call it whatever you want but that's what we normally call.
+
+#
+
+
