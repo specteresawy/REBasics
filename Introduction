@@ -36,6 +36,14 @@ int main(int argc, char** argv):
 
 # The previous C program has one function which is called functionFunction and a main function , in c or C++ programms the standard main function that gets called takes two parameters, the first parameter is the number of args ( arguments ) that were passed, Traditionally we call that argc ( arg C ), you can call it whatever you want but that's what we normally call.
 
-#
+# And then we have an array of strings which is char** (which means its a pointer to a pointer ) because the way strings are handled in C language is to treat them as an array : that is really a simple list in memory of charachters and each charachter is normally encoded in ASCII and it takes one byte for each charachter of your string.
+
+#All that's happening here in the function within main function is accepting input from the user, and this is a horrible program because its just calling functionFunction and doesn't check anything.
+
+# So if we don't pass in a parameter this program will actually crash.
+
+# we call functionFunction and take the very first argument that was passed in argv[1].
+
+#Because these arrays are based zero, argv[0] points to the name of the program that we are running, so argv[1] is the first argument, also 42 is passed and 3.14 pi value was passed either.
 
 
